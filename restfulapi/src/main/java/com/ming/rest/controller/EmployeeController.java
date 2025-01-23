@@ -149,12 +149,12 @@ public Employee detail(@PathVariable Long id){
 
 @RequestMapping(value = "employees/{id}/{name}/{age}",method = RequestMethod.GET)
 @ResponseBody
-//public Employee info(@PathVariable Long id, @PathVariable String name, @PathVariable int age){
-//    return new Employee(id,name,age);
-//}
-public Employee info(Employee e){//也可以将id/name/age封装成对象
-return e;
+public Employee info(@PathVariable Long id, @PathVariable String name, @PathVariable int age){
+    return new Employee(id,name,age);
 }
+//public Employee info(Employee e){//也可以将id/name/age封装成对象
+//return e;
+//}
 
 
 
